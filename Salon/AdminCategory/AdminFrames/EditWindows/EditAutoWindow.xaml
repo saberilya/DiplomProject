@@ -1,0 +1,81 @@
+﻿<Window x:Class="Salon.AdminCategory.AdminFrames.EditWindows.EditAutoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Salon.AdminCategory.AdminFrames.EditWindows"
+        mc:Ignorable="d"
+              Height="700" Width="800"
+       WindowStyle="None"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+ResizeMode="NoResize"
+WindowStartupLocation="CenterScreen"
+       Background="#181735">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" CornerRadius="15" Margin="15,15,380,25" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#FF41339E">
+            
+                
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="5">
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Название :" FontWeight="Bold" Margin="4"/>
+                    <TextBlock  FontFamily="Arial" FontSize="20" Foreground="White" Text="Модель:" FontWeight="Bold" Margin="4" />
+                    <TextBlock  FontFamily="Arial" FontSize="20" Foreground="White" Text="Страна:" FontWeight="Bold" Margin="4" />
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Год выпуска:" FontWeight="Bold"   Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Мощность:" FontWeight="Bold"   Margin="4"/>
+                    <TextBlock  FontFamily="Arial"  FontSize="20" Foreground="White" Text="Цена:" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Пробег:" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Тип кузова :" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Комплектация :" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="По ПТС:" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="VIN:" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Статус :" FontWeight="Bold"  Margin="4"/>
+                    <TextBlock FontFamily="Arial" FontSize="20" Foreground="White" Text="Цвет :" FontWeight="Bold"  Margin="4"/>
+                    <Button x:Name="BtnAdd" Click="BtnAdd_Click" Foreground="White" HorizontalAlignment="Center"   Style="{StaticResource MaterialDesignIconButton}"  >
+                        <materialDesign:PackIcon Kind="ContentSave"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <TextBox PreviewTextInput="BrandText_PreviewTextInput" x:Name="BrandText" Foreground="White" FontSize="15" ></TextBox>
+                    <TextBox PreviewTextInput="ModelText_PreviewTextInput" x:Name="ModelText" Foreground="White" FontSize="15" ></TextBox>
+                    <TextBox PreviewTextInput="CountryText_PreviewTextInput" x:Name="CountryText" Foreground="White" FontSize="15"></TextBox>
+                    <TextBox PreviewTextInput="YearText_PreviewTextInput" x:Name="YearText" Foreground="White" FontSize="15"></TextBox>
+                    <TextBox PreviewTextInput="HPText_PreviewTextInput" x:Name="HPText" Foreground="White" FontSize="15"></TextBox>
+                    <TextBox PreviewTextInput="PriceText_PreviewTextInput" x:Name="PriceText" Foreground="White" FontSize="15"></TextBox>
+                    <TextBox PreviewTextInput="KMText_PreviewTextInput" x:Name="KMText" Foreground="White" FontSize="15"></TextBox>
+                    <TextBox PreviewTextInput="BodyText_PreviewTextInput" x:Name="BodyText" Foreground="White" FontSize="15"></TextBox>
+                    <TextBox PreviewTextInput="ComplectText_PreviewTextInput" x:Name="ComplectText" Foreground="White" FontSize="15"></TextBox>
+
+                    <TextBox PreviewTextInput="PTSText_PreviewTextInput" x:Name="PTSText" Foreground="White" FontSize="15" ></TextBox>
+                    <TextBox PreviewTextInput="VINText_PreviewTextInput" x:Name="VINText" Foreground="White" FontSize="15" ></TextBox>
+                    <ComboBox  x:Name="StatusBox" DisplayMemberPath="StatusName"></ComboBox>
+                    <TextBox PreviewTextInput="ColorText_PreviewTextInput" x:Name="ColorText" Foreground="White" FontSize="15" ></TextBox>
+
+                </StackPanel>
+                
+            </Grid>
+            
+        </Border>
+
+
+        <Border Grid.Column="1" Margin="15" Background="#FF41339E" CornerRadius="15" HorizontalAlignment="Right" VerticalAlignment="Top">
+
+            <Button x:Name="ExitClick" Click="ExitClick_Click" Foreground="White"  Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  >
+                <materialDesign:PackIcon Kind="ExitRun"/>
+            </Button>
+        </Border>
+        <Image Source="{Binding Picture}" Opacity="0.5" Grid.Row="1" Grid.Column="1" Margin="76,76,-76,-76"></Image>
+    </Grid>
+</Window>

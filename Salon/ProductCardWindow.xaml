@@ -1,0 +1,111 @@
+﻿<Window x:Class="Salon.ProductCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Salon"
+        mc:Ignorable="d"
+        Height="700" Width="800"
+        WindowStyle="None"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+ ResizeMode="NoResize"
+ WindowStartupLocation="CenterScreen"
+        Background="#181735">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" CornerRadius="15" Margin="15,15,380,25" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#FF41339E">
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="566*"/>
+                    <RowDefinition Height="95*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5" Grid.Column="0" Grid.RowSpan="3">
+                    <TextBlock Text="Название :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Модель :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Страна :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Год выпуска :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Мощность :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Цена :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Пробег :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Тип кузова :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Комплектация :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="ПТС :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="ВИН номер :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Цвет :  " Foreground="White" FontSize="25" />
+                    <TextBlock Text="Статус :  " Foreground="White" FontSize="25" />
+
+
+
+
+
+                </StackPanel>
+                <StackPanel Margin="5" Grid.Column="1">
+                    <TextBlock x:Name="ProductName" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductModelNameLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductCountryLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductYearLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductHPLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductPriceLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductKilometreLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductBodyLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductCompLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductPTSOwnersLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductVINLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock x:Name="ProductColorLabel" Foreground="White" FontSize="25"/>
+                    <TextBlock Text="{Binding Status.StatusName}" Foreground="White" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                    <Button Foreground="White"      
+         FontSize="20"       
+         Margin="5"       
+         Content="Купить"
+         x:Name="GoToOrderPicked"
+         Click="GoToOrderPicked_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#181735"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="LightGray"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Height="40" Width="150" CornerRadius="15" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Border Grid.Column="1" Margin="15" CornerRadius="15" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF41339E">
+            
+            <Button x:Name="ExitClick" Click="ExitClick_Click" Foreground="White"  Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  >
+                <materialDesign:PackIcon Kind="ExitRun"/>
+            </Button>
+        </Border>
+        <Image Source="{Binding Picture}"  Opacity="0.8" Grid.Column="1" Margin="29,159,-29,191" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

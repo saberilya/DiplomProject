@@ -1,0 +1,83 @@
+﻿<Window x:Class="Salon.PurchaseAgreementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Salon"
+        mc:Ignorable="d"
+        Title="PurchaseAgreementWindow"  ResizeMode="NoResize"
+ WindowStartupLocation="CenterScreen"
+ Background="#181735"
+  WindowStyle="None"
+        Width="750" Height="750"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Grid>
+        <Border Margin="20" Background="#FF41339E" CornerRadius="15">
+
+            <Grid>
+                
+                
+                
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                        <TextBlock  Height="30" Foreground="White" Text="Условия договора покупки/заявки на покупку автомобиля"
+FontSize="15" FontWeight="Bold" TextAlignment="Center" Margin="10" />
+                    <Button x:Name="ExitClick" Click="ExitClick_Click" Foreground="White"  Style="{StaticResource MaterialDesignIconButton}" Grid.Row="0"  >
+                            <materialDesign:PackIcon Kind="ExitRun"/>
+                        </Button>
+                    </StackPanel>
+                    
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0 50 0 0">
+                    <Grid>
+                        <TextBlock Foreground="White" TextWrapping="Wrap" Margin="10">
+<Run Text="1. Предмет договора" FontWeight="Bold" FontSize="18"/><LineBreak />
+<Run Text="1.1. Настоящий договор регулирует условия покупки автомобиля (далее – «Автомобиль») в автосалоне." FontSize="14"/><LineBreak />
+  <Run FontSize="20" Text="*"></Run>             
+  <Run FontSize="20" Text="- Обратите внимание"></Run>             
+<LineBreak />
+<Run Text="2. Обязательства заявителя" FontWeight="Bold" FontSize="18"/><LineBreak />
+<Run Text="2.1. " FontSize="14"/>
+<Run Text="Заявитель обязуется явиться в автосалон в течение 2-3 дней после получения звонка от менеджера.*"  FontSize="14"/><LineBreak />
+<Run Text="2.2. " FontSize="14"/>
+<Run Text="При посещении автосалона заявитель должен иметь при себе документ, подтверждающий личность.*"   FontSize="14"/><LineBreak />
+<Run Text="2.3. " FontSize="14"/>
+<Run Text="Если заявитель подал заявку на покупку автомобиля, он должен иметь при себе недостающую сумму для покупки.*"   FontSize="14"/><LineBreak />
+<Run Text="2.4. " FontSize="14"/>
+<Run Text="Первоначальная внесенная сумма будет учтена в стоимости автомобиля.*"   FontSize="14"/><LineBreak />
+<Run Text="2.5. " FontSize="14"/>
+<Run Text="Заявитель обязан проверить техническое состояние автомобиля перед подписанием договора купли-продажи.*"   FontSize="14"/><LineBreak />
+<Run Text="2.6. " FontSize="14"/>
+<Run Text="В случае отказа от покупки, заявитель обязан уведомить автосалон не менее чем за 24 часа до назначенного визита.*"   FontSize="14"/><LineBreak />
+<Run Text="2.7. " FontSize="14"/>
+<Run Text="Заявитель соглашается с тем, что все личные данные, предоставленные автосалону, будут использованы в соответствии с политикой конфиденциальности автосалона.*"   FontSize="14"/><LineBreak />
+<LineBreak />
+<Run Text="3. Обязанности автосалона" FontWeight="Bold" FontSize="18"/><LineBreak />
+<Run Text="3.1. " FontSize="14"/>
+<Run Text="Автосалон обязуется предоставить заявителю информацию о техническом состоянии автомобиля, его характеристиках и истории эксплуатации."   FontSize="14"/><LineBreak />
+<Run Text="3.2. " FontSize="14"/>
+<Run Text="Автосалон обязуется своевременно уведомить заявителя о готовности автомобиля к выдаче."   FontSize="14"/><LineBreak />
+<Run Text="3.3. " FontSize="14"/>
+<Run Text="Автосалон обязуется предоставить заявителю возможность проведения тест-драйва автомобиля перед покупкой."   FontSize="14"/><LineBreak />
+<Run Text="3.4. " FontSize="14"/>
+<Run Text="Автосалон обязуется обеспечить наличие всех необходимых документов для оформления покупки автомобиля."   FontSize="14"/><LineBreak />
+<Run Text="3.5. " FontSize="14"/>
+<Run Text="Автосалон обязуется учесть первоначально внесенную сумму в стоимости автомобиля."   FontSize="14"/><LineBreak />
+<Run Text="3.6. " FontSize="14"/>
+<Run Text="Автосалон обязуется предоставить заявителю информацию о порядке возврата денежных средств в случае отказа от покупки."   FontSize="14"/><LineBreak />
+<LineBreak />
+<Run Text="4. Прочие условия" FontWeight="Bold" FontSize="18"/><LineBreak />
+<Run Text="4.1. Настоящий договор вступает в силу с момента его подписания обеими сторонами.*" FontSize="14"/><LineBreak />
+<Run Text="4.2. Все споры и разногласия, возникающие из настоящего договора или в связи с ним, подлежат разрешению в соответствии с законодательством Российской Федерации.*" FontSize="14"/><LineBreak />
+<Run Text="4.3. Автосалон оставляет за собой право вносить изменения в условия договора в одностороннем порядке, уведомив об этом заявителя не менее чем за 10 дней до вступления изменений в силу.*" FontSize="14"/><LineBreak />
+                        </TextBlock>
+                        <Button Height="40" Content="Договор Купли Продажи!" VerticalAlignment="Bottom" FontSize="20" Foreground="White" x:Name="BtnPech" Click="BtnPech_Click" ></Button>
+                    </Grid>
+                    
+                </ScrollViewer>
+                
+            </Grid>
+
+
+        </Border>
+      
+    </Grid>
+</Window>
